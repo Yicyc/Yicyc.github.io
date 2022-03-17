@@ -1,0 +1,1202 @@
+﻿<!--■ 
+<a id="clickMe" onclick="sAlert('测试效果还可以直接书写HTML代码');" />
+<script type="text/javascript">
+
+setTimeout(function() {
+    // IE
+    if(document.all) {
+        document.getElementById("clickMe").click();
+    }
+    // 其它浏览器
+    else {
+        var e = document.createEvent("MouseEvents");
+        e.initEvent("click", true, true);
+        document.getElementById("clickMe").dispatchEvent(e);
+    }
+}, 0);
+</script>
+<script type="text/javascript" language="javascript">
+            function sAlert(str){
+            var msgw,msgh,bordercolor;
+            msgw=400;//提示窗口的宽度
+            msgh=100;//提示窗口的高度
+            bordercolor="#336699";//提示窗口的边框颜色
+            titlecolor="#99CCFF";//提示窗口的标题颜色
+            var sWidth,sHeight;
+            sWidth=document.body.offsetWidth;
+            sHeight=document.body.offsetHeight;
+            var bgObj=document.createElement("div");
+            bgObj.setAttribute('id','bgDiv');
+            bgObj.style.position="absolute";
+            bgObj.style.top="0";
+            bgObj.style.background="#777";
+            bgObj.style.filter="progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75";
+            bgObj.style.opacity="0.6";
+            bgObj.style.left="0";
+            bgObj.style.width=sWidth + "px";
+            bgObj.style.height=sHeight + "px";
+            document.body.appendChild(bgObj);
+            var msgObj=document.createElement("div")
+            msgObj.setAttribute("id","msgDiv");
+            msgObj.setAttribute("align","center");
+            msgObj.style.position="absolute";
+            msgObj.style.background="white";
+            msgObj.style.font="12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+            msgObj.style.border="1px solid " + bordercolor;
+            msgObj.style.width=msgw + "px";
+            msgObj.style.height=msgh + "px";
+          msgObj.style.top=(document.documentElement.scrollTop + (sHeight-msgh)/4) + "px";
+          msgObj.style.left=(sWidth-msgw)/2 + "px";
+          var title=document.createElement("h4");
+          title.setAttribute("id","msgTitle");
+          title.setAttribute("align","right");
+          title.style.margin="0";
+          title.style.padding="3px";
+          title.style.background=bordercolor;
+          title.style.filter="progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20, finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100);";
+          title.style.opacity="0.75";
+          title.style.border="1px solid " + bordercolor;
+          title.style.height="18px";
+          title.style.font="12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+          title.style.color="white";
+          title.style.cursor="pointer";
+          title.innerHTML="关闭";
+          title.onclick=function(){
+            document.body.removeChild(bgObj);
+        document.getElementById("msgDiv").removeChild(title);
+        document.body.removeChild(msgObj);
+        }
+          document.body.appendChild(msgObj);
+          document.getElementById("msgDiv").appendChild(title);
+          var txt=document.createElement("p");
+          txt.style.margin="1em 0"
+          txt.setAttribute("id","msgTxt");
+          txt.innerHTML=str;
+      document.getElementById("msgDiv").appendChild(txt);
+      }
+        </script>
+■-->
+<!-- ■■■■■■■■■■■■■■分割线-分割线-分割线■■■■■■■■■■■■■■ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Yicyc</title>
+    <link rel="shortcut icon" href="favcion.ico" />
+    <link rel="stylesheet" href=" css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+<!--灰色<style type="text/css">body {filter:grayscale(0.95);background-color:#f7f7f7;}</style>灰色-->
+
+</head>
+
+<body>
+    <div class="container" id="container">
+        <aside class="left-bar" id="leftBar">
+            <div class="title">
+                <p>Yicyc</p>
+            </div>
+            <nav class="nav">
+                <div class="item active"><a href=""><i class="iconfont icon-daohang2"></i><a href="http://www.yicyc.com/@dh/" target="_blank">引导目录</a><i class="line"></i></div>
+
+				  <form action="http://www.baidu.com/s" accept-charset="UTF-8" onSubmit="document.charset='UTF-8'" method="get" target="_blank">
+  <input name="wd" placeholder="百度搜索" size="20">
+  </form>
+<form action="http://www.google.com.hk/" id="cse-search-box" accept-charset="UTF-8 onsubmit=document.charset='UTF-8'" target="_blank">
+ <input type="hidden" name="cx" value="partner-pub-6238062290632855:yflrh1qpako">
+ <input type="text" name="q" placeholder="谷歌搜索" size="20">
+ </form>
+                <ul class="nav-item" id="navItem">
+                    <li><a href="#0" class="active"><i class="iconfont icon-shequ"></i>更多分类</a></li>
+                    <li><a href="#1"><i class="iconfont icon-shequ"></i>社区网络</a></li>
+                    <li><a href="#2"></i><i class="iconfont icon-shequ"></i>视频网站</a></li>
+                    <li><a href="#3"></i><i class="iconfont icon-shequ"></i>常用网站</a></li>
+		    <li><a href="#4"></i><i class="iconfont icon-shequ"></i>小说文学</a></li>
+                    <li><a href="#5"></i><i class="iconfont icon-shequ"></i>实用工具</a></li>
+                    <li><a href="#6"></i><i class="iconfont icon-shequ"></i>影视资源</a></li>
+                    <li><a href="#7"></i><i class="iconfont icon-shequ"></i>网页游戏</a></li>
+                    <li><a href="#8"></i><i class="iconfont icon-shequ"></i>动漫资源</a></li>
+                <!-- 左边下拉 -->
+                </br></br></br></br></br></br></br></br>
+                <!-- 左边下拉 -->
+                <!-- Logo -->
+                <img src="logo.png">
+                <!-- Logo -->
+                </br></br>
+                <!-- 说明 -->
+                <font color=ffff00>寻找网页可通过：</br>CTRL+F输入[标题]搜索</font></br></br>
+                <!-- 说明 -->
+                <!-- 左边底部文字 -->
+                <font color=00ffff>
+                <SCRIPT language=javascript>
+                BirthDay=new Date("oct 10,2018");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                document.write("于2018-10-10成立至今已有<font color=ffff00>"+daysold+"</font>天 !");
+                </SCRIPT>
+                </font>
+                </br></br>
+                <div class="item active">
+                <a href=""></i><a href="http://beian.miit.gov.cn/icp/publish/query/icpMemoInfo_showPage.action#" target="_blank">备案号：鄂ICP备19025246号-1</a><i class="line"></i>
+                </div>
+                <!-- 左边底部文字 -->
+
+                <!-- 栏目 -->
+                </ul>
+            </nav>
+        </aside>
+        <section class="main">
+            <div id="mainContent">
+                <!-- 手机端菜单 -->
+                <div id="menu-box">
+                   <div id="menu">
+                       <input type="checkbox" id="menu-form">
+                       <label for="menu-form" class="menu-spin">
+                        <div class="line diagonal line-1"></div>
+                        <div class="line horizontal"></div>
+                        <div class="line diagonal line-2"></div>
+                      </label>
+                    </div>
+                </div>
+                <!-- 游戏导航1 -->
+                <div class="box">
+                    <a href="#" name="0"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>更多分类</div>
+　　　[</i><a href="https://www.kaiheila.cn/app/channels/2690299414037589/9868469506395385" target="_blank">开黑啦</a><i class="line"></i>]
+　[</i><a href="https://fanyi.baidu.com/" target="_blank">百度翻译</a><i class="line"></i>]
+　[</i><a href="http://fanyi.youdao.com/" target="_blank">有道翻译</a><i class="line"></i>]
+　[</i><a href="https://translate.google.cn/" target="_blank">谷歌翻译</a><i class="line"></i>]
+　[</i><a href="http://www.iciba.com/" target="_blank">iCIBA翻译</a><i class="line"></i>]
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a href="https://www.baidu.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/baidu.jpg"> 百度搜索</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="https://www.google.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/google.jpg"> Google搜索</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="https://yandex.com/images/">
+                            <div class="item">
+                                <div class="logo"><img src="https://yastatic.net/images-thumbs/_/8cS_MbHl6VBweqVjWeI-eNy0tzE.ico"> yandex搜图</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="http://www.gosugamers.net/">
+                            <div class="item">
+                                <div class="logo"><img src="img/GGA.jpg"> GGA全球电子竞技联盟</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="#blz" class="active">
+                            <div class="item">
+                                <div class="logo"><img src="img/zhanwang.jpg"> 暴雪专题</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="#ff14" class="active">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 最终幻想14·FF14</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="#lol" class="active">
+                            <div class="item">
+                                <div class="logo"><img src="https://lol.qq.com/favicon.ico"> 英雄联盟·LOL</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a href="">
+                            <div class="item">
+                                <div class="logo"><img src="favcion.ico">待定</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 游戏导航2 -->
+                <!-- 社区网络1 -->
+                <div class="box">
+                    <a href="#" name="1"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>社区网络</div>
+　　　[</i><a href="http://yodao.ys168.com/" target="_blank">永硕网盘</a><i class="line"></i>]
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://bbs.nga.cn/">
+                            <div class="item">
+                                <div class="logo"><img src="img/NGA.jpg" > NGA</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.52pojie.cn/">
+                            <div class="item">
+                                <div class="logo"><img src="img/52pojie.jpg" > 吾爱破解</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.douban.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/douban.jpg" > 豆瓣</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.pixiv.net/">
+                            <div class="item">
+                                <div class="logo"><img src="favcion.ico" > Pivix</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://weibo.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/sinaweibo.png" > 新浪微博</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://twitter.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/twitter.jpg" > twitter</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/facebook.jpg" > facebook</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://github.com/">
+                            <div class="item">
+                                <div class="logo"><img src="https://github.githubassets.com/favicons/favicon.png" > GitHub</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 社区网络2 -->
+                <!-- 视频网站1 -->
+                <div class="box">
+                    <a href="#" name="2"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>视频网站</div>
+　　　[</i><a href="https://pan.baidu.com/" target="_blank">百度云盘</a><i class="line"></i>]
+　[</i><a href="https://www.aliyundrive.com/" target="_blank">阿里云盘</a><i class="line"></i>]
+　[</i><a href="https://drive.mypikpak.com/" target="_blank">PikPak</a><i class="line"></i>]
+						
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.bilibili.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/bilibili.jpg" > 哔哩哔哩</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.iqiyi.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/iqiyi.jpg" > 爱奇艺</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://v.qq.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/qqshipin.jpg" > 腾讯视频</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.youku.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/youku.jpg" > 优酷网</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.youtube.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/youtube.png" > YouTube</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.twitch.tv/">
+                            <div class="item">
+                                <div class="logo"><img src="img/twitch.jpg" > Twitch</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.douyutv.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/douyu.jpg" > 斗鱼TV</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.netflix.com/">
+                            <div class="item">
+                                <div class="logo"><img src="favcion.ico" > Netflix</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 视频网站2 -->
+                <!-- 常用网站1 -->
+                <div class="box">
+                    <a href="#" name="3"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>常用网站</div>
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://mail.qq.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/qqyouxiang.jpg" > QQ邮箱</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://outlook.live.com">
+                            <div class="item">
+                                <div class="logo"><img src="img/outlook.jpg" > Outook邮箱</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.yahoo.co.jp/">
+                            <div class="item">
+                                <div class="logo"><img src="img/yahujp.jpg" > 雅虎日本</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.taobao.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/taobao.jpg" > 淘宝</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.tmall.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/tianmao.jpg" > 天猫</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.jd.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/jd.jpg" > 京东</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.amazon.cn/">
+                            <div class="item">
+                                <div class="logo"><img src="img/yamaxun.jpg" > 亚马逊</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 常用网站2 -->
+                <!-- 小说文学1 -->
+                <div class="box">
+                    <a href="" name="4"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>小说文学</div>
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.qidian.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/qidian.jpg" > 起点中文网</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.xxsy.net/">
+                            <div class="item">
+                                <div class="logo"><img src="img/xiaoxiangshuyuan.jpg"> 潇湘书院</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://chuangshi.qq.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/chuangshi.jpg"> 创世中文网</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 小说文学2 -->
+                <!-- 实用工具1 -->
+                <div class="box">
+                    <a href="" name="5"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>实用工具</div>
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.uupoop.com/">
+                            <div class="item">
+                                <div class="no-logo">在线PS</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://cli.im/deqr">
+                            <div class="item">
+                                <div class="no-logo">草料二维码</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.danmuji.org/">
+                            <div class="item">
+                                <div class="no-logo">B站弹幕姬</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.xianyuso.com/">
+                            <div class="item">
+                                <div class="no-logo">咸鱼搜索</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.clipconverter.cc/">
+                            <div class="item">
+                                <div class="no-logo">Youtube视频嗅探下载</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://convertio.co/zh/mp4-gif/">
+                            <div class="item">
+                                <div class="no-logo">MP4转GIF</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://mydowndown.com/">
+                            <div class="item">
+                                <div class="no-logo">下載 facebook 影片</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://2tool.top/">
+                            <div class="item">
+                                <div class="no-logo">搜索引擎网页快照</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://archive.org/">
+                            <div class="item">
+                                <div class="no-logo">网页快照</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 实用工具2 -->
+                <!-- 资源网站1 -->
+                <div class="box">
+                    <a href="" name="6"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>资源网站</div>
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.speedtest.cn/">
+                            <div class="item">
+                                <div class="no-logo">speedtest跑速工具</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://fast.com/">
+                            <div class="item">
+                                <div class="no-logo">speedtest跑速工具</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.vultr.com/">
+                            <div class="item">
+                                <div class="no-logo">vultr美国主机商</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 资源网站2 -->
+                <!-- 网页游戏1 -->
+                <div class="box">
+                    <a href="" name="7"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>网页游戏</div>
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://web.sanguosha.com/login/index.html">
+                            <div class="item">
+                                <div class="no-logo">三国杀</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.maj-soul.com/#/home">
+                            <div class="item">
+                                <div class="no-logo">雀魂</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://kobalab.net/majiang/paili.html">
+                            <div class="item">
+                                <div class="no-logo">日麻-牌理</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://tenhou.net/2/?q=">
+                            <div class="item">
+                                <div class="no-logo">天凤-牌理</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 网页游戏2 -->
+                <!-- 动漫资源1 -->
+                <div class="box">
+                    <a href="" name="8"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>影视资源资讯</div>
+　　　[</i><a href="https://video.bqrdh.com/" target="_blank">不求人导航@影视</a><i class="line"></i>]
+　[</i><a href="https://share.dmhy.org/" target="_blank">动漫花园</a><i class="line"></i>]
+　[</i><a href="https://totheglory.im/login.php?returnto=" target="_blank">TTG</a><i class="line"></i>]
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://yuc.wiki/">
+                            <div class="item">
+                                <div class="no-logo">动漫新番索引</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://hmacg.cn/bangumi/">
+                            <div class="item">
+                                <div class="no-logo">动漫新番表</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://bangumi.tv/calendar">
+                            <div class="item">
+                                <div class="no-logo">动漫每日放送</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://bgmlist.com/#">
+                            <div class="item">
+                                <div class="no-logo">番组放送</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://anime-data.com/">
+                            <div class="item">
+                                <div class="no-logo">动画数据</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://mikanani.me/">
+                            <div class="item">
+                                <div class="no-logo">蜜柑计划</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                            <div class="item">
+                                <div class="no-logo">　</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.dilidili3.com/">
+                            <div class="item">
+                                <div class="no-logo"> 无名小站dilidili</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.hideystudio.xyz/">
+                            <div class="item">
+                                <div class="no-logo">隐社 官网</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://weibo.com/u/2691443681">
+                            <div class="item">
+                                <div class="no-logo">隐社 微博</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://mytvbt.net/viewthread.php?tid=1852&extra=page%3D1">
+                            <div class="item">
+                                <div class="no-logo">日菁</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                            <div class="item">
+                                <div class="no-logo">　</div>
+
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://yyets.dmesg.app/">
+                            <div class="item">
+                                <div class="no-logo">人人下载分享</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.doki8.com/">
+                            <div class="item">
+                                <div class="no-logo">心动日剧</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://yyds.fans/index">
+                            <div class="item">
+                                <div class="no-logo">YYDS</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://t-rex.tzfile.com/">
+                            <div class="item">
+                                <div class="no-logo">霸王龙压制组</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://ddrk.me/">
+                            <div class="item">
+                                <div class="no-logo">低端影视</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.fanxinzhui.com/">
+                            <div class="item">
+                                <div class="no-logo">追新番</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.duboku.tv/">
+                            <div class="item">
+                                <div class="no-logo">独播库</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                            <div class="item">
+                                <div class="no-logo">　</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 动漫资源2 -->
+                <!-- 暴雪专题1 -->
+                <div class="box">
+                    <a href="" name="blz"></a>
+                    <div class="sub-category">
+                        <div><a href="#0"><i class="iconfont icon-shequ"></i>暴雪专题</div>
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a href="https://www.battlenet.com.cn/zh/">
+                            <div class="item">
+                                <div class="logo"><img src="img/zhanwang.jpg"> 战网-国服</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://heroes.blizzard.cn/landing">
+                            <div class="item">
+                                <div class="logo"><img src="img/wow.jpg"> 魔兽世界官网-国服</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://heroes.blizzard.cn/landing">
+                            <div class="item">
+                                <div class="logo"><img src="img\hots\hots1.png"> 风暴英雄官网-国服</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://bbs.nga.cn/thread.php?fid=431">
+                            <div class="item">
+                                <div class="logo"><img src="img/NGA.jpg"> NGA风暴英雄</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.reddit.com/r/heroesofthestorm/">
+                            <div class="item">
+                                <div class="logo"><img src="img/hots/hots1.png"> reddit风暴英雄-梯子</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://hero.thnuclub.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/hots/hots.jpg"> 风暴音频</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://liquipedia.net/heroes/Main_Page">
+                            <div class="item">
+                                <div class="logo"><img src="https://liquipedia.net/commons/extensions/TeamLiquidIntegration/resources/pagelogo/liquipedia_icon_menu.png"> 风暴赛事百科-英文</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.hotslogs.com/Sitewide/HeroAndMapStatistics">
+                            <div class="item">
+                                <div class="logo"><img src="img/hots/hots1.png"> 游戏数据统计hotslogs-英文</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.warcraftlogs.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/wow.jpg"> WCL</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.herodamage.com/zh/warlock/combinations-3a/1t-t22-affliction]">
+                            <div class="item">
+                                <div class="logo"><img src="img/wow.jpg"> Hero Damage</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.simulationcraft.org/download.html">
+                            <div class="item">
+                                <div class="logo"><img src="img/wow.jpg"> SIMC</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://www.curseforge.com/wow/addons/simulationcraft/download">
+                            <div class="item">
+                                <div class="logo"><img src="img/wow.jpg"> SIMC插件下载</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 暴雪专题2 -->
+                <!-- 最终幻想141 -->
+                <div class="box">
+                    <a href="" name="ff14"></a>
+                    <div class="sub-category">
+                        <div>
+			<a href="#0"><i class="iconfont icon-shequ"></i>最终幻想14</div>
+　　　[</i><a href="http://ff.sdo.com/web8/index.html#/home" target="_blank">官网</a><i class="line"></i>]
+　[</i><a href="http://bbs.nga.cn/thread.php?fid=-362960&rand=907" target="_blank">NGA</a><i class="line"></i>]
+　[</i><a href="https://asvel.github.io/ffxiv-gearing/" target="_blank">FF14配装器</a><i class="line"></i>]
+　[</i><a href="http://act.ff.sdo.com/Project/20181018ffactive/index.html" target="_blank">活动页面</a><i class="line"></i>]
+　[</i><a href="https://ff14.org/" target="_blank">新大陆异闻</a><i class="line"></i>]
+　[</i><a href="http://riesa.gitee.io/crystal/" target="_blank">水晶驿站-导航</a><i class="line"></i>]
+　[</i><a href="https://www.garlandtools.org/db/#npc/1010828" target="_blank">FF14数据库</a><i class="line"></i>]
+　[</i><a href="https://ff14.huijiwiki.com/wiki/%E6%96%87%E6%9C%AC%E6%8C%87%E4%BB%A4" target="_blank">文本指令</a><i class="line"></i>]
+　[</i><a href="https://space.bilibili.com/15503317" target="_blank">时尚品鉴-B站</a><i class="line"></i>]
+　[</i><a href="https://bbs.nga.cn/read.php?tid=25448889" target="_blank">安利视频</a><i class="line"></i>]
+　[</i><a href="https://ff14.huijiwiki.com/wiki/%E7%89%88%E6%9C%AC#" target="_blank">版本更新</a><i class="line"></i>]
+                    </div>
+                    <div>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://ff14.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> WIKI百科</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://ff14.huijiwiki.com/wiki/%E5%89%AF%E6%9C%AC">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> WIKI百科-副本</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://ff14.huijiwiki.com/wiki/ItemSearch?equiplevel_min=45&equiplevel_max=55&kind=2&category=28">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> WIKI-物品检索器</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://ff14.huijiwiki.com/wiki/%E7%90%86%E7%AC%A6%E6%A3%80%E7%B4%A2%E5%99%A8?submit=1&%E7%AD%89%E7%BA%A7%E6%9C%80%E5%B0%8F=70&%E7%AD%89%E7%BA%A7%E6%9C%80%E5%A4%A7=80&%E7%B1%BB%E5%9E%8B=%E8%A3%81%E8%A1%A3%E5%8C%A0%E7%90%86%E7%AC%A6%E4%BB%BB%E5%8A%A1">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> WIKI-理符检索器</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://ff14.huijiwiki.com/wiki/%E9%83%A8%E9%98%9F%E9%A3%9E%E7%A9%BA%E8%89%87">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 飞空艇WIKI</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://ff14.huijiwiki.com/wiki/%E9%83%A8%E9%98%9F%E6%BD%9C%E6%B0%B4%E8%89%87">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 潜水艇WIKI</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://ff14.huijiwiki.com/wiki/%E9%A3%8E%E5%A4%A9%E6%96%87%E4%B9%A6%C2%B7%E7%AC%AC%E4%BA%8C%E5%8D%B7">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 古武黄道文书WIKI</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="http://5p.nbb.ffxiv.cn/#/workshop">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 工坊模拟器</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://www.ffxiv.cn/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 素素-中文攻略站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://caiji.ffxiv.cn/#/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 素素-采集时钟</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://tools.ffxiv.cn/lajipai/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 素素辣鸡排</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://naicha.ffxiv.xin/#/home">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 素素大奶茶</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://cn.ff14angler.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 饥饿的猫-钓鱼站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://fftool.caolebahji.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 钓鱼工具-钓鱼站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://fish.senriakane.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 钓鱼时钟-钓鱼站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://asvel.github.io/ffxiv-weather-bell/#rakt">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> FF14天气预报</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://ffxiv.tk/crafter/?i=1#/simulator">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 生产模拟器</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://nephren_ruq.gitee.io/fauxhollowsprobabilisticsolver/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 幻巧计算器</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="http://ashtender.com/ffxiv/tails">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 天书3线计算器[需要梯子]</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://ffxiv.tk/crafter/xrc/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 仙人微彩计算器</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://www.ffxivsc.cn/index.html?page=home">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 光之搜藏家-幻化站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://mirapri.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> mirapri-幻化站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://ffxiv.eorzeacollection.com/glamours">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> EC-幻化站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://housingsnap.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> housingsnap-装修站</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://kdygsz.vps6.mydnns.com/BlueMagicebook/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 青魔法书</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://space.bilibili.com/339725">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 假面狂欢攻略 UP主 bilibili</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://cn.fflogs.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> logs战斗数据</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://xivanalysis.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 战斗手法检查</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="http://ffxivhunt.cn/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 狩猎时间表</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://ffxivhuntcn.com/index.html">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 狩猎时间表2</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://asvel.gitee.io/ffxiv-weather/#lims">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 天气预报</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://staging.universalis.app/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 网页板子查价</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://ffxiv-eureka.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> ULK优雷卡 Tracker</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://eureka.ffxivsc.cn/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> ULK优雷卡 综合管理平台</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://bzy.mocca-works.site/#/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 南方博兹雅战线监控板</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://bbs.nga.cn/read.php?tid=23746810&fav=e84eec92">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 南方博兹雅战线攻略-BGA</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://ffcafe.org/act/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> CafeACT整合</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://github.com/pipirapira/NiNiTechnology">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 尼尼科技的Github</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://bbs.tggfl.com/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 獭爹的BBS</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://github.com/Bluefissure/PaisleyPark/releases/tag/v1.5.2">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 獭爹的Github</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://file.bluefissure.com/FFXIV/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 獭爹的网盘</div>
+                            </div>
+                        </a>
+        <!-- 栏目 -->
+                        <a target="_blank" href="https://fflog.netlify.app/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> XIV日志查看器</div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://moeshen.cn/ffxiv/home/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 萌神神攻略站</div>
+                            </div>
+                        </a>
+        <!-- 栏目 -->
+                        <a target="_blank" href="https://ff14.org/handbooks/ubahamut/">
+                            <div class="item">
+                                <div class="logo"><img src="img/ff14.png"> 暗搓搓 绝巴哈攻略</div>
+                            </div>
+                        </a>
+        <!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 最终幻想142 -->
+                <!-- 英雄联盟1 -->
+                <div class="box">
+                    <a href="" name="lol"></a>
+                    <div class="sub-category">
+                        <div>
+			<a href="#0"><i class="iconfont icon-shequ"></i>英雄联盟</div>
+		<!-- 栏目 -->
+                        <a target="_blank" href="https://www.op.gg/champion/statistics">
+                            <div class="item">
+                                <div class="logo"><img src="https://lol.qq.com/favicon.ico"> OP.GG(召唤师峡谷-数据)</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                        <a target="_blank" href="https://lolalytics.com/lol/tierlist/aram/">
+                            <div class="item">
+                                <div class="logo"><img src="https://lol.qq.com/favicon.ico"> LOL ARAM(大乱斗-数据)</div>
+                            </div>
+                        </a>
+                <!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                            <div class="item">
+                                <div class="logo"></div>
+                            </div>
+                        </a>
+		<!-- 栏目 -->
+                    </div>
+                </div>
+                <!-- 英雄联盟2 -->
+                </footer>
+                <!-- 结束end -->
+                <div id="fixedBar"><svg class="Zi Zi--BackToTop" title="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path></svg></div>
+        </section>
+        <script src="js/jquery.js"></script>
+        <script>
+        var oMenu = document.getElementById('menu');
+        var oLeftBar = document.getElementById('leftBar');
+        var menuFrom = document.getElementById('menu-form');
+
+        oMenu.onclick = function() {
+            if (oLeftBar.offsetLeft == 0) {
+                oLeftBar.style.left = -249 + 'px';
+            }
+            else {
+                oLeftBar.style.left = 0;
+            }
+        }
+
+
+        // 监听页面宽度变化
+        window.onresize = function() {
+            judgeWidth();
+            // console.log(document.documentElement.clientWidth);
+        };
+
+        // 判断页面宽度
+        function judgeWidth() {
+            if (document.documentElement.clientWidth > 481) {
+                oLeftBar.style.left = 0;
+            } else {
+                oLeftBar.style.left = -249 + 'px';
+            }
+        }
+
+
+        var oNavItem = document.getElementById('navItem');
+        var aA = oNavItem.getElementsByTagName('a');
+        for (var i = 0; i < aA.length; i++) {
+            aA[i].onclick = function() {
+                for (var j = 0; j < aA.length; j++) {
+                    aA[j].className = '';
+                }
+                this.className = 'active';
+                if (oLeftBar.offsetLeft == 0) {
+                    if (document.documentElement.clientWidth <= 481) {
+                        oLeftBar.style.left = -249 + 'px';
+                        menuFrom.checked = false;
+
+                    }
+                }
+            }
+        }
+
+
+        $(window).scroll(function() {
+            if($(window).scrollTop() >= 200){
+                $('#fixedBar').fadeIn(300);
+            }else{
+                $('#fixedBar').fadeOut(300);
+            }
+        });
+        $('#fixedBar').click(function() {
+            $('html,body').animate({scrollTop:'0px'},800);
+        })
+        </script>
+</body>
+
+</html>
+<!--屏蔽1-->
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+<!--屏蔽2-->
+<!--底部拉长1-->
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<!--底部拉长2-->
+
+<!--音乐1-->
+<!--■<audio autoplay="" loop=""><source src="http://www.yicyc.com/@music/1.mp3"></audio>■-->
+<!--音乐2-->
